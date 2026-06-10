@@ -2,7 +2,7 @@
 Repository for Data and Scripts used by UDST's Team for Sasol Solar Competition 2026
 
 *Control Stops:-*
-
+This is greatly beneficial for you to segment the larger route into smaller chunks and get data for each segment. (Route Risk and Weather)
 1. Darwin: -12.463732830749025, 130.8444325220543
 2. Katherine: -14.451966176114073, 132.26984885979022
 3. Tennant Creek: -19.645930990244036, 134.1909741394222
@@ -14,3 +14,10 @@ Repository for Data and Scripts used by UDST's Team for Sasol Solar Competition 
 9. Port Augusta: -32.49527644368528, 137.77123220750624
 10. Adelaide: -34.92862942314289, 138.59985690123526
 * **Source: https://www.jusolarteam.se/challenge**
+
+**Check out these 3 tutorials by Schmid Elektronik, make sure to follow them with the tutorial PPT below them:**
+**https://schmid-elektronik.ch/bootcamp-sem26/**
+
+For Energy Efficiencies, I've posted documentation for the parts we will use in the car in the "Energy Optimization" folder; you can also find extra info if you search the parts' model names online, in any case however:-
+If you have any questions regarding how Motor and Car body works for modeling email: abdulrahman.alyahri@udst.edu.qa
+If you have any questions regarding how Battery/Solar Panels works for modeling email: Helal.mohammad@udst.edu.qa
