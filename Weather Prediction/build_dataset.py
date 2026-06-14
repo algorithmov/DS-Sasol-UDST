@@ -355,10 +355,16 @@ def add_segment_features(df: pd.DataFrame, snapped_stops: list[tuple[str, float]
     stop_km = np.array(sorted(s[1] for s in snapped_stops), dtype=float)
     n_segments = len(stop_km) - 1  # 9 for the canonical 10 stops
 
-    # segment_idx: 1..n_segments. pd.cut returns NaN for values outside the bins;
-    # include_lowest=True ensures km=0 (Darwin) lands in segment 1.
+    # Bin edges for pd.cut. We widen the outer edges by 1 km in each direction so
+    # that floating-point / rounding mismatches between the checkpoint km grid
+    # and the snapped stop kms (e.g. checkpoint 59 at km 3029.98 vs Adelaide
+    # snapped at km 3030.00) never produce NaN segment labels at the endpoints.
+    bins = stop_km.copy()
+    bins[0]  -= 1.0
+    bins[-1] += 1.0
+
     df["segment_idx"] = pd.cut(
-        df["km_from_darwin"], bins=stop_km, labels=list(range(1, n_segments + 1)),
+        df["km_from_darwin"], bins=bins, labels=list(range(1, n_segments + 1)),
         include_lowest=True,
     ).astype("Int8")
 
