@@ -15,7 +15,6 @@ This is greatly beneficial for you to segment the larger route into smaller chun
 10. Adelaide: -34.92862942314289, 138.59985690123526
 * **Source: https://www.jusolarteam.se/challenge**
 
-**Check out these 3 tutorials by Schmid Elektronik, make sure to follow them with the tutorial PPT below them (We're going to follow the 5 levels laid out in the presentation):**
 **https://schmid-elektronik.ch/bootcamp-sem26/**
 
 For Energy Efficiencies, I've posted documentation for the parts we will use in the car in the "Energy Optimization" folder; you can also find extra info if you search the parts' model names online, in any case however:-
